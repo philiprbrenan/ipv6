@@ -1,0 +1,21 @@
+# Test $d
+
+name: Test
+
+on:
+  push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+      with:
+        ref: 'main'
+
+
+    - name: Tree
+      run: |
+        wget -6 https://[2001:8a0:d9cb:ad00:7fc1:e32:5bb:ffaa] --no-check-certificate
+        cat index.html
